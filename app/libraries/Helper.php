@@ -46,23 +46,44 @@ class Helper{
 
 
    }
-    public static function getTrials($name, $cond){
+    public static function getTrials($name, $cond,$start,$rows){
        
-       $xml = simplexml_load_file("http://66.228.43.27:8080/solr/select?q=".$name.$cond."&rows=1");
+       $xml = simplexml_load_file("http://66.228.43.27:8080/solr/select?q=".$name.$cond."&start=".$start."&rows=".$rows);
 
         $totalTrials = $xml->result['numFound'];
+        (int) $totalTrials;
         $ent = 0;
-		$chil1  = $xml->result;
+		$docs  = $xml->result;
 		
-		// foreach ($chil1 as $doc) {
-		// 	print_r($doc);
+		// foreach ($docs as $doc) {
+		// 	echo $doc->arr[0];
 		// }
+		//calculating end of items
+		$end = $rows;
+		Session::put('next-disable',"");
+		if($totalTrials-$start < $rows){
+			$end = $totalTrials-$start;
+			Session::put('next-disable',"disabled");
+		}
+		
+		//get cities
+		$cities =array();
+		for ($i=0; $i<$end; $i++) {
+			$str="";
+		foreach ($docs->doc[$i]->arr[0] as $city) {
+			$str.=$city.",";
+			
+		}
+		array_push($cities,$str);
+		}
 
-		// foreach ($chil1->doc[1]->arr[0] as $str) {
-		// 	echo $str;
+		// foreach ($cities as $c) {
+		// 	echo "<br>".$c;
 		// }
 		
-		return $totalTrials;
+
+		$data = array("totalTrials"=>$totalTrials,"cities"=>$cities);
+		return $data;
 		
 
 

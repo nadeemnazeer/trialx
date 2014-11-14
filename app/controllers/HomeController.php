@@ -8,6 +8,7 @@ class HomeController extends BaseController {
 	{
 		Session::flush();
 		Session::put('qCount',1);
+		Session::put('start',0);
   		return View::make('index');
 	}
 
@@ -15,7 +16,7 @@ class HomeController extends BaseController {
 			$paramName=Input::get('paramName');;
 			$paramValue=Input::get('paramValue');;
 			$name=Input::get('name');
-
+			Session::put('name',$name);
 
 			
 			$cond="";
@@ -69,14 +70,23 @@ class HomeController extends BaseController {
 		   ->with('question',$currQuestion)
 		   ->with('categories',$categories)
 		   ->with('disabled',$dis)
-		   ->with('query',Session::get('query'));
+		   ->with('query',$cond);
 		  
 
 
 	}
 
 	public function getTrials(){
-		
+
+			$name= Session::get('name');
+			$query = Session::get('query');
+			
+			$start = Session::get('start');
+			Session::put('start',$start+10);	
+
+			 return View::make('trials')
+			  ->with('data',Helper::getTrials($name,$query,$start,10));
+
 
 	}
 

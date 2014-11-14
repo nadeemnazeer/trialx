@@ -31,34 +31,38 @@
     </style>
 
   </head>
-  <body class="container">
+  <body class="container" style="text-align:center">
   <div class="row" style="padding-top:200px;">
+    <div class="col-md-12 col-lg-12" >
       <div class="btn btn-warning btn-lg btn-cstm {{Session::get('q1')}}">{{Session::get('q1')}}</div><img src="images/arrow2.png">
       <div class="btn btn-warning btn-lg btn-cstm {{Session::get('q2')}}">{{Session::get('q2')}}</div><img src="images/arrow2.png">
       <div class="btn btn-warning btn-lg btn-cstm {{Session::get('q3')}}">{{Session::get('q3')}}</div><img src="images/arrow2.png">
       <div class="btn btn-warning btn-lg btn-cstm {{Session::get('q4')}}">{{Session::get('q4')}}</div><img src="images/arrow2.png">
       <div class="btn btn-warning btn-lg btn-cstm {{Session::get('q5')}}">{{Session::get('q5')}}</div>
+    </div>
   </div>
-<div class="row">  
+<div>  
 
 <h2>Trials Returned:: {{ $trials }}</h2> {{HTML::link('trials','View Trials',array('class'=>'fancybox fancybox.iframe btn btn-danger'))}} 
 
-    {{ Form::open(array('url'=>'search', 'class'=>'form-search', 'role'=>'form','method' => 'get')) }}
-        <div class="row">
-                <div class="input-group row">
-                    <div class="col-lg-4 col-md-4">
-                    {{Form::label('question',$question,array('style'=>'text-transform:uppercase'))}}:</div> 
-                    <div class="col-lg-5 col-md-5">
-                    {{Form::select('paramValue', $categories,'',array('class'=>'form-control'))}}
+    {{ Form::open(array('url'=>'search', 'class'=>'row form-search', 'role'=>'form','method' => 'get')) }}
+
+                <div class="">
+                    <div class="col-md-3 col-lg-3">
+                    </div>
+                   <div class="col-md-6 col-lg-6 pull-left" style="float:left">
+                    {{Form::label('question',$question,array('style'=>'text-transform:uppercase'))}}:{{Form::select('paramValue', $categories,'',array('class'=>'form-control'))}}
                     {{Form::hidden('paramName',$question)}}
-                    {{Form::hidden('name',$med)}}
-                    </div>
-                    <div class="col-lg-3 col-md-3">
-                    {{ Form::submit('Next', array('class'=>'btn btn-primary',$disabled => $disabled))}}
-                    </div>
+                    {{Form::hidden('name',$med)}}</div>
+
+                  <div class="col-md-2 col-lg-2 pull-left"></div>
+                  <div class="row">
+                      {{ Form::submit('Next', array('class'=>'btn btn-primary',$disabled => $disabled))}}
+                  </div>
+                 
                    
                 </div>
-        </div>
+
     {{ Form::close() }}
     {{$query}}
 </div>
@@ -71,10 +75,15 @@
         <script type="text/javascript">
         $(document).ready(function() {   
            $(".btn-cstm").attr("disabled","disabled");
-           $(".{{$question}}").removeAttr("disabled");
-          $(".{{$question}}").removeClass("btn-warning");
+           $(".{{$question}}").removeClass("btn-warning");
            $(".{{$question}}").addClass("btn-success");
-
+            $(".fancybox").fancybox({
+        'width': 900,
+        'height': 900,
+        'transitionIn': 'elastic',
+        'transitionOut': 'elastic',
+        'type': 'iframe'
+    });
 
 
 
