@@ -10,16 +10,20 @@
 <body>
 	<div>
 	<?php 
-	 
-	echo Entropy::calEntropy('phase');
-	echo "<br>";
-	echo Entropy::calEntropy('gender');
-	echo "<br>";
-	echo Entropy::calEntropy('treatment_status');
-	echo "<br>";
-	echo Entropy::calEntropy('state');
-	echo "<br>";
-	echo Entropy::calEntropy('city');
+
+	// echo Helper::getEntropy('phase');
+	// echo "<br>";
+	// echo Helper::getEntropy('gender');
+	// echo "<br>";
+	// echo Helper::getEntropy('treatment_status');
+	// echo "<br>";
+	// echo Helper::getEntropy('state');
+	// echo "<br>";
+	// echo Helper::getEntropy('city');
+
+	//echo Helper::getTrials('city:chicago');
+	//Helper::getTypes('city');
+
 	
 
 

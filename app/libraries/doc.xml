@@ -1,0 +1,555 @@
+<doc>
+<arr name="city">
+<str>Minneapolis</str>
+</arr>
+<arr name="conditions">
+<str>Multiple Myeloma</str>
+<str>Multiple Myeloma and Plasma Cell Neoplasm</str>
+<str>Multiple Myeloma And Immunoproliferative Neoplasms</str>
+<str>Mult Myelm W/O Remission</str>
+<str>Mult Myelm W Remission</str>
+<str>Multiple Myeloma Stage I</str>
+<str>Multiple Myeloma Stage Ii</str>
+<str>Multiple Myeloma Stage Iii</str>
+<str>Fgfr3/Igh Fusion</str>
+<str>Increased Risk For Multiple Myeloma</str>
+<str>Lig4, Ala3val</str>
+<str>Lig4, Thr9ile</str>
+<str>m protein, multiple myeloma</str>
+<str>prevention of multiple myeloma</str>
+<str>
+oncology; disease status; limited to multiple myeloma, systemic disease; stage ii or higher (for use in a medicare-approved demonstration project)
+</str>
+<str>
+oncology; disease status; limited to multiple myeloma, systemic disease; extent of disease unknown,
+</str>
+<str>whsc1 protein, human</str>
+<str>trappc1 protein, human</str>
+<str>
+multiple myeloma patients with no documentation of prescribed or received intravenous bisphosphonate therapy
+</str>
+<str>
+oncology; disease status; limited to multiple myeloma, systemic disease; smoldering, stage i (for use in a medicare-approved demonstration project)
+</str>
+<str>myeov protein, human</str>
+<str>Multiple Myeloma Bone Disease</str>
+<str>Refractory Multiple Myeloma</str>
+<str>
+Hematologic Malignancies, Multiple Myeloma, Lymphoma
+</str>
+<str>Relapsed or Refractory Multiple Myeloma</str>
+<str>Smoldering Multiple Myeloma</str>
+<str>Relapsed Multiple Myeloma</str>
+<str>Multiple Myeloma With Plasmacytoma</str>
+<str>Relapsed and Refractory Multiple Myeloma</str>
+<str>Hodgkin's Disease or Multiple Myeloma</str>
+<str>Relapsed and/or Refractory Multiple Myeloma</str>
+</arr>
+<arr name="coordinates">
+<str>44.971965,-93.23588</str>
+</arr>
+<arr name="criteria">
+<str>
+Patients meeting the Durie and Salmon criteria for initial diagnosis of multiple
+</str>
+<str>myeloma.</str>
+<str>
+All patients with multiple myeloma requiring therapy.
+</str>
+<str>Patients less than or equal to 70 years of age.</str>
+<str>
+Patients will be eligible after initial therapy in either first complete or partial
+</str>
+<str>remission or if no objective response is achieved.</str>
+<str>
+Patients achieving initial response and later disease progression will be eligible
+</str>
+<str>
+after subsequent therapy upon achievement of either complete or partial response.
+</str>
+<str>
+Patients will be ineligible if they have advanced myeloma refractory to salvage
+</str>
+<str>chemotherapy regimens.</str>
+<str>
+To be eligible patients must have adequate: cardiac function (no active ischemia
+</str>
+<str>
+left ventricular ejection fraction > 45% by MUGA scan); renal function (creatinine
+</str>
+<str>
+clearance > 40 ml/min); liver function (bilirubin < 2.0 mg/dl ALT < 3x the upper
+</str>
+<str>
+limit of normal); adequate pulmonary function (FEV1 AND FVC >50% predicted and DLCO
+</str>
+<str>
+(corrected) > 50% predicted; and Karnofsky performance of > 80%.
+</str>
+<str>
+Patients must be free of active uncontrolled infection at the time of study entry.
+</str>
+<str>
+Patients must have adequate hematologic function manifest as hemoglobin > 8 gm/dl
+</str>
+<str>
+(untransfused); WBC > 3000/ml; absolute neutrophil count (ANC) > 1500/ml; and
+</str>
+<str>platelets > 100 000/ml (untransfused).</str>
+<str>
+At study entry patients must be > 4 weeks from prior myelosuppressive chemotherapy;
+</str>
+<str>and > 6 weeks from prior nitrosoureas.</str>
+<str>
+Female patients who are pregnant (positive b-HCG) or breastfeeding will be excluded
+</str>
+<str>
+from study entry. In addition fertile men or women unwilling to use contraceptive
+</str>
+<str>
+techniques during and for 4 weeks following completion of maintenance therapy will
+</str>
+<str>also be excluded from study entry.</str>
+<str>
+Patients must exercise informed voluntary consent and sign a consent form approved by
+</str>
+<str>
+the University of Minnesota IRB: Human Subjects Committee.
+</str>
+<str>
+Patients will be ineligible if they have advanced myeloma refractory and unresponsive
+</str>
+<str>to salvage chemotherapy regimens.</str>
+<str>
+Female patients who are pregnant (positive b-HCG) or breastfeeding will be excluded
+</str>
+<str>
+from study entry. In addition fertile men or women unwilling to use contraceptive
+</str>
+<str>
+techniques during and for 12 months following treatment particularly after
+</str>
+<str>
+thalidomide will also be excluded from study entry.
+</str>
+<str>
+Patients meeting the Durie and Salmon criteria for initial diagnosis of multiple
+</str>
+<str>
+myeloma, requiring therapy and meeting one of the following:
+</str>
+<str>
+After initial therapy in either first complete or partial remission or no
+</str>
+<str>objective response</str>
+<str>
+After achieving initial response and later disease progression, patient will be
+</str>
+<str>
+eligible after subsequent therapy upon achievement of either complete or partial
+</str>
+<str>response</str>
+<str>
+Is not eligible or has refused any protocols of higher priority
+</str>
+<str>18 - 75 years of age</str>
+<str>Adequate organ function defined as:</str>
+<str>
+Hematologic: hemoglobin ≥ 8 gm/dl (untransfused), white blood cells (WBC) ≥
+</str>
+<str>
+3000/μl, absolute neutrophil count (ANC) ≥ 1500/μl, platelets ≥ 100,000/μl
+</str>
+<str>(untransfused)</str>
+<str>
+Cardiac: no active ischemia, left ventricular ejection fraction > 45% by MUGA
+</str>
+<str>can</str>
+<str>
+Hepatic: bilirubin < 2.0 mg/dl, ALT < 3x the upper limit of normal
+</str>
+<str>
+Pulmonary: FEV1-Forced Expiratory Volume in One Second AND Forced vital capacity
+</str>
+<str>
+(FVC) >50% predicted and Carbon Monoxide Diffusing Capacity (DLCO) (corrected) >
+</str>
+<str>50% predicted</str>
+<str>
+Performance status: Karnofsky performance of > 80%.
+</str>
+<str>
+Free of active uncontrolled infection at the time of study entry.
+</str>
+<str>
+At time of study enrollment > 4 weeks from prior myelosuppressive chemotherapy; and >
+</str>
+<str>6 weeks from prior nitrosoureas.</str>
+<str>
+Patients must exercise informed voluntary consent and sign a consent form approved by
+</str>
+<str>
+the University of Minnesota IRB: Human Subjects Committee.
+</str>
+<str>
+Patients will be ineligible if they have advanced myeloma refractory and unresponsive
+</str>
+<str>to salvage chemotherapy regimens.</str>
+<str>
+Female patients who are pregnant (positive b-HCG) or breastfeeding will be excluded
+</str>
+<str>
+from study entry. In addition fertile men or women unwilling to use contraceptive
+</str>
+<str>
+techniques during and for 12 months following treatment, particularly after
+</str>
+<str>
+thalidomide will also be excluded from study entry.
+</str>
+<str>
+Patients meeting the Durie and Salmon criteria for initial diagnosis of multiple
+</str>
+<str>
+myeloma, requiring therapy and meeting one of the following:
+</str>
+<str>
+After initial therapy in either first complete or partial remission or no
+</str>
+<str>objective response</str>
+<str>
+After achieving initial response and later disease progression, patient will be
+</str>
+<str>
+eligible after subsequent therapy upon achievement of either complete or partial
+</str>
+<str>response</str>
+<str>
+Is not eligible or has refused any protocols of higher priority
+</str>
+<str>18 - 75 years of age</str>
+<str>Adequate organ function defined as:</str>
+<str>
+Hematologic: hemoglobin ≥ 8 gm/dl (untransfused), white blood cells (WBC) ≥
+</str>
+<str>
+3000/μl, absolute neutrophil count (ANC) ≥ 1500/μl, platelets ≥ 100,000/μl
+</str>
+<str>(untransfused)</str>
+<str>
+Cardiac: no active ischemia, left ventricular ejection fraction > 45% by MUGA
+</str>
+<str>can</str>
+<str>
+Hepatic: bilirubin < 2.0 mg/dl, ALT < 3x the upper limit of normal
+</str>
+<str>
+Pulmonary: FEV1-Forced Expiratory Volume in One Second AND Forced vital capacity
+</str>
+<str>
+(FVC) >50% predicted and Carbon Monoxide Diffusing Capacity (DLCO) (corrected) >
+</str>
+<str>50% predicted</str>
+<str>
+Performance status: Karnofsky performance of > 80%.
+</str>
+<str>
+Free of active uncontrolled infection at the time of study entry.
+</str>
+<str>
+At time of study enrollment > 4 weeks from prior myelosuppressive chemotherapy; and >
+</str>
+<str>6 weeks from prior nitrosoureas.</str>
+<str>
+Patients must exercise informed voluntary consent and sign a consent form approved by
+</str>
+<str>
+the University of Minnesota IRB: Human Subjects Committee.
+</str>
+<str>
+Patients will be ineligible if they have advanced myeloma refractory and unresponsive
+</str>
+<str>to salvage chemotherapy regimens.</str>
+<str>
+Female patients who are pregnant (positive b-HCG) or breastfeeding will be excluded
+</str>
+<str>
+from study entry. In addition fertile men or women unwilling to use contraceptive
+</str>
+<str>
+techniques during and for 12 months following treatment, particularly after
+</str>
+<str>
+thalidomide will also be excluded from study entry.
+</str>
+<str>
+Patients meeting the Durie and Salmon criteria for initial diagnosis of multiple
+</str>
+<str>
+myeloma, requiring therapy and meeting one of the following:
+</str>
+<str>
+After initial therapy in either first complete or partial remission or no
+</str>
+<str>objective response</str>
+<str>
+After achieving initial response and later disease progression, patient will be
+</str>
+<str>
+eligible after subsequent therapy upon achievement of either complete or partial
+</str>
+<str>response</str>
+<str>
+Is not eligible or has refused any protocols of higher priority
+</str>
+<str>18 - 75 years of age</str>
+<str>Adequate organ function defined as:</str>
+<str>
+Hematologic: hemoglobin ≥ 8 gm/dl (untransfused), white blood cells (WBC) ≥
+</str>
+<str>
+3000/μl, absolute neutrophil count (ANC) ≥ 1500/μl, platelets ≥ 100,000/μl
+</str>
+<str>(untransfused)</str>
+<str>
+Cardiac: no active ischemia, left ventricular ejection fraction > 45% by MUGA
+</str>
+<str>can</str>
+<str>
+Hepatic: bilirubin < 2.0 mg/dl, ALT < 3x the upper limit of normal
+</str>
+<str>
+Pulmonary: FEV1-Forced Expiratory Volume in One Second AND Forced vital capacity
+</str>
+<str>
+(FVC) >50% predicted and Carbon Monoxide Diffusing Capacity (DLCO) (corrected) >
+</str>
+<str>50% predicted</str>
+<str>
+Performance status: Karnofsky performance of > 80%.
+</str>
+<str>
+Free of active uncontrolled infection at the time of study entry.
+</str>
+<str>
+At time of study enrollment > 4 weeks from prior myelosuppressive chemotherapy; and >
+</str>
+<str>6 weeks from prior nitrosoureas.</str>
+<str>
+Patients must exercise informed voluntary consent and sign a consent form approved by
+</str>
+<str>
+the University of Minnesota IRB: Human Subjects Committee.
+</str>
+<str>
+Patients will be ineligible if they have advanced myeloma refractory and unresponsive
+</str>
+<str>to salvage chemotherapy regimens.</str>
+<str>
+Female patients who are pregnant (positive b-HCG) or breastfeeding will be excluded
+</str>
+<str>
+from study entry. In addition fertile men or women unwilling to use contraceptive
+</str>
+<str>
+techniques during and for 12 months following treatment, particularly after
+</str>
+<str>
+thalidomide will also be excluded from study entry.
+</str>
+<str>
+Patients meeting the Durie and Salmon criteria for initial diagnosis of multiple
+</str>
+<str>
+myeloma, requiring therapy and meeting one of the following:
+</str>
+<str>
+After initial therapy in either first complete or partial remission or no
+</str>
+<str>objective response</str>
+<str>
+After achieving initial response and later disease progression, patient will be
+</str>
+<str>
+eligible after subsequent therapy upon achievement of either complete or partial
+</str>
+<str>response</str>
+<str>
+Is not eligible or has refused any protocols of higher priority
+</str>
+<str>18 - 75 years of age</str>
+<str>Adequate organ function defined as:</str>
+<str>
+Hematologic: hemoglobin ≥ 8 gm/dl (untransfused), white blood cells (WBC) ≥
+</str>
+<str>
+3000/μl, absolute neutrophil count (ANC) ≥ 1500/μl, platelets ≥ 100,000/μl
+</str>
+<str>(untransfused)</str>
+<str>
+Cardiac: no active ischemia, left ventricular ejection fraction > 45% by MUGA
+</str>
+<str>can</str>
+<str>
+Hepatic: bilirubin < 2.0 mg/dl, ALT < 3x the upper limit of normal
+</str>
+<str>
+Pulmonary: FEV1-Forced Expiratory Volume in One Second AND Forced vital capacity
+</str>
+<str>
+(FVC) >50% predicted and Carbon Monoxide Diffusing Capacity (DLCO) (corrected) >
+</str>
+<str>50% predicted</str>
+<str>
+Performance status: Karnofsky performance of > 80%.
+</str>
+<str>
+Free of active uncontrolled infection at the time of study entry.
+</str>
+<str>
+At time of study enrollment > 4 weeks from prior myelosuppressive chemotherapy; and >
+</str>
+<str>6 weeks from prior nitrosoureas.</str>
+<str>
+Patients must exercise informed voluntary consent and sign a consent form approved by
+</str>
+<str>
+the University of Minnesota IRB: Human Subjects Committee.
+</str>
+<str>
+Patients will be ineligible if they have advanced myeloma refractory and unresponsive
+</str>
+<str>to salvage chemotherapy regimens.</str>
+<str>
+Female patients who are pregnant (positive b-HCG) or breastfeeding will be excluded
+</str>
+<str>
+from study entry. In addition fertile men or women unwilling to use contraceptive
+</str>
+<str>
+techniques during and for 12 months following treatment, particularly after
+</str>
+<str>
+thalidomide will also be excluded from study entry.
+</str>
+<str>
+Patients meeting the Durie and Salmon criteria for initial diagnosis of multiple
+</str>
+<str>
+myeloma, requiring therapy and meeting one of the following:
+</str>
+<str>
+After initial therapy in either first complete or partial remission or no
+</str>
+<str>objective response</str>
+<str>
+After achieving initial response and later disease progression, patient will be
+</str>
+<str>
+eligible after subsequent therapy upon achievement of either complete or partial
+</str>
+<str>response</str>
+<str>
+Is not eligible or has refused any protocols of higher priority
+</str>
+<str>18 - 75 years of age</str>
+<str>Adequate organ function defined as:</str>
+<str>
+Hematologic: hemoglobin ≥ 8 gm/dl (untransfused), white blood cells (WBC) ≥
+</str>
+<str>
+3000/μl, absolute neutrophil count (ANC) ≥ 1500/μl, platelets ≥ 100,000/μl
+</str>
+<str>(untransfused)</str>
+<str>
+Cardiac: no active ischemia, left ventricular ejection fraction > 45% by MUGA
+</str>
+<str>can</str>
+<str>
+Hepatic: bilirubin < 2.0 mg/dl, ALT < 3x the upper limit of normal
+</str>
+<str>
+Pulmonary: FEV1-Forced Expiratory Volume in One Second AND Forced vital capacity
+</str>
+<str>
+(FVC) >50% predicted and Carbon Monoxide Diffusing Capacity (DLCO) (corrected) >
+</str>
+<str>50% predicted</str>
+<str>
+Performance status: Karnofsky performance of > 80%.
+</str>
+<str>
+Free of active uncontrolled infection at the time of study entry.
+</str>
+<str>
+At time of study enrollment > 4 weeks from prior myelosuppressive chemotherapy; and >
+</str>
+<str>6 weeks from prior nitrosoureas.</str>
+<str>
+Patients must exercise informed voluntary consent and sign a consent form approved by
+</str>
+<str>
+the University of Minnesota IRB: Human Subjects Committee.
+</str>
+<str>
+Patients will be ineligible if they have advanced myeloma refractory and unresponsive
+</str>
+<str>to salvage chemotherapy regimens.</str>
+<str>
+Female patients who are pregnant (positive b-HCG) or breastfeeding will be excluded
+</str>
+<str>
+from study entry. In addition fertile men or women unwilling to use contraceptive
+</str>
+<str>
+techniques during and for 12 months following treatment, particularly after
+</str>
+<str>
+thalidomide will also be excluded from study entry.
+</str>
+</arr>
+<str name="display_conditions">Multiple Myeloma</str>
+<str name="django_ct">txdb.trial</str>
+<str name="django_id">69256</str>
+<str name="gender">Both</str>
+<bool name="has_investigator">true</bool>
+<str name="id">txdb.trial.69256</str>
+<bool name="is_featured">false</bool>
+<bool name="isactive">true</bool>
+<bool name="isusersubmitted">false</bool>
+<date name="lchangetime">2011-01-11T00:00:00Z</date>
+<long name="maxage">75</long>
+<long name="minage">18</long>
+<str name="nctIdentifier">NCT00177047</str>
+<long name="phase">0</long>
+<float name="rank">0.8</float>
+<str name="show_transplant_trials">yes</str>
+<arr name="sitenames">
+<str>Masonic Cancer Center, University of Minnesota</str>
+</arr>
+<arr name="state">
+<str>MN</str>
+</arr>
+<str name="study_type">Interventional</str>
+<str name="title">Autologous Transplant for Multiple Myeloma</str>
+<arr name="treatment_name">
+<str>Stem Cell Transplant</str>
+<str>cyclophosphamide, melphalan</str>
+<str>Thalidomide and Dexamethasone</str>
+<str>Cyclophosphamide + Mesna</str>
+<str>thalidomide</str>
+<str>melphalan</str>
+<str>Granulocyte-colony stimulating factor</str>
+<str>dexamethasone</str>
+</arr>
+<arr name="treatment_status">
+<str>refractory</str>
+<str>Refractory</str>
+</arr>
+<str name="weburl">
+multiple-myeloma-autologous-transplant-multiple-myeloma
+</str>
+<arr name="zipcode">
+<str>55455</str>
+</arr>
+</doc>

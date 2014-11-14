@@ -11,3 +11,5 @@
 |
 */
 Route::get('/', array('uses'=>'HomeController@getIndex'));
+Route::get('search', array('uses'=>'HomeController@getSearch'));
+Route::get('trials', array('uses'=>'HomeController@getTrials'));
