@@ -21,10 +21,33 @@ class HomeController extends BaseController {
 			//resetting the start page position of trial view
 			Session::put('start',0);	
 	
+
 			$cond="";
-			if($paramName != ""){	
+			if($paramName != ""){
+
+			
+			if(Input::has('next')){	
 			 $cond= Session::get('query')."&fq=".$paramName.":".$paramValue;
-			 Session::put('query',$cond);
+			 Session::push('prev',Session::get('query'));
+			 Session::put('query',$cond);}
+			elseif(Input::has('prev')){
+
+				$arr = Session::get('prev');
+				$top = array_pop($arr);
+				
+				Session::forget('prev');
+
+				foreach ($arr as $value) {
+					Session::push('prev',$value);
+				}
+			 	Session::put('query',$top);
+			 	$cond = Session::get('query');
+			 }
+			 else{
+			 	$cond= Session::get('query')."&fq=".$paramName.":".$paramValue;
+			    Session::put('query',$cond);
+
+			 }
 			}
 
 			//checking if we have already calculated entropy for the medical condition with name = $name, so as to avoid overhead of recalculating it
@@ -48,21 +71,30 @@ class HomeController extends BaseController {
 				
 				
 			}
-
-			//keeping track of current questions
-			$qCount = Session::get('qCount');
-
-			//getting current question name
-			$currQuestion = Session::get('q'.$qCount);
 			
+		   
+			
+			if(Input::has('next')){
+				
+				Session::put('qCount',Session::get('qCount')+1);
+
+			}
+			elseif(Input::has('prev')){
+				Session::put('qCount',Session::get('qCount')-1);
+				
+			}
+		
+			$currQuestion = Session::get('q'.Session::get('qCount'));
+			
+		   
 			//array for storing the possible values of answers to questions which we had already stored in session while calculating entropy in getEntropy() function.
 			$categories = array();
 			$dis="";
 			
-			Session::put('qCount',$qCount+1);
+			
 
 			//disabling the next button, if we asked all the 5 questions
-			if(Session::get('qCount') > 6){
+			if(Session::get('qCount') > 5){
 				$dis = "disabled";
 			}
 			else{
@@ -86,6 +118,23 @@ class HomeController extends BaseController {
 		   ->with('query',$cond);
 		  
 
+
+	}
+
+		public function getSearch2(){
+
+			$currParamName=Input::get('currParamName');
+			$currParamValue=Input::get('currParamValue');
+			$name=Input::get('name');
+
+		
+			
+			$query="";
+				$query += $name."&fq=".$currParamName.":".$currParamValue;
+			
+
+			return View::make('search.index2')
+			->with('query',$query);
 
 	}
 

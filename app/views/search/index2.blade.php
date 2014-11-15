@@ -62,39 +62,24 @@
 
   </head>
   <body class="container" style="text-align:center">
-  <div class="row" style="padding-top:200px;">
-    <div class="col-md-12 col-lg-12" >
-      <div class="btn btn-warning btn-sm btn-cstm {{Session::get('q1')}}">{{Session::get('q1')}}</div><img src="images/arrow2.png">
-      <div class="btn btn-warning btn-sm btn-cstm {{Session::get('q2')}}">{{Session::get('q2')}}</div><img src="images/arrow2.png">
-      <div class="btn btn-warning btn-sm btn-cstm {{Session::get('q3')}}">{{Session::get('q3')}}</div><img src="images/arrow2.png">
-      <div class="btn btn-warning btn-sm btn-cstm {{Session::get('q4')}}">{{Session::get('q4')}}</div><img src="images/arrow2.png">
-      <div class="btn btn-warning btn-sm btn-cstm {{Session::get('q5')}}">{{Session::get('q5')}}</div>
-    </div>
-  </div>
 
 <div style="padding-top:30px;">
-            {{ Form::open(array('url'=>'search', 'class'=>'form-inline form-search', 'role'=>'form','method' => 'get')) }}
-            {{ Form::submit('Previous', array('class'=>'btn btn-primary','name'=>'prev'))}}
+            {{ Form::open(array('url'=>'search2/'.$query, 'class'=>'form-inline form-search', 'role'=>'form','method' => 'get')) }}
 
-            {{Form::label('question',$question,array('style'=>'text-transform:uppercase'))}}&nbsp;{{Form::select('paramValue', $categories,'',array('class'=>'form-control'))}}
-            {{Form::hidden('paramName',$question)}}
-            {{Form::hidden('name',$med)}}
 
-            {{ Form::submit('Next', array('class'=>'btn btn-primary',$disabled => $disabled,'name'=>'next'))}}
+            {{Form::label('question','question',array('style'=>'text-transform:uppercase'))}}&nbsp;{{Form::select('paramValue', array('val1'=>'val1','val2'=>'val2'),'',array('class'=>'form-control'))}}
+            {{Form::hidden('paramName','question')}}
+            {{Form::hidden('name','name')}}
+
+            {{ Form::submit('Next', array('class'=>'btn btn-primary'))}}
 
 
             {{ Form::close() }}
+            {{$query}}
+
 </div>  
 
-<div class="row r-top">  
-<div class="col-md-6 col-lg-6 trl-txt">
-<span> Trials Returned:</span>
-<div class="circle pull-right">{{ $trials }}</div>
-</div>
-<div class="col-md-6 col-lg-6 trl-btn">
- {{HTML::link('trials','VIEW TRIALS',array('class'=>'fancybox fancybox.iframe btn btn-danger pull-left'))}} 
-</div>
-</div>
+
           
 <!--     {{$query}} -->
 
@@ -106,8 +91,7 @@
         <script type="text/javascript">
         $(document).ready(function() {   
            $(".btn-cstm").attr("disabled","disabled");
-           $(".{{$question}}").removeClass("btn-warning");
-           $(".{{$question}}").addClass("btn-success");
+        
             $(".fancybox").fancybox({
         'width': 1000,
         'height': 900,
