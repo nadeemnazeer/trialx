@@ -21,15 +21,24 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style type="text/css">
+    body{
+
+      font-size: 12px;
+    }
+    </style>
   </head>
   <body class="container">
 <div class="row"> 
-
-<table class="table table-bordered">
+  <div class="table-responsive">
+<table class="table table-bordered table-striped table-condensed">
       <thead>
         <tr>
+              
              <th>City</th>
-             <th>Coordinates</th>
+             <th>Sitename</th>
+             <th>States</th>
+             <th>Study Type</th>
              <th>Other</th>
          
         </tr>
@@ -38,8 +47,10 @@
         
         @foreach($data as $t)
     	<tr>	
-    			<td>{{$t->city}}</td>
-    			<td>{{$t->coordinate}}</td>
+          <td>{{$t->city}}</td>
+    			<td>{{$t->sitename}}</td>
+          <td>{{$t->state}}</td>
+    	    <td>{{$t->study_type}}</td>
     			<td>other</td>
     	</tr>
     	@endforeach 
@@ -47,7 +58,7 @@
      
       </tbody>
 </table>
-
+</div>
 {{HTML::link('trials?next=1&prev=0','Next',array('class'=>' btn btn-primary pull-right',Session::get('next-disable')))}} 
 
 

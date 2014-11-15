@@ -2,18 +2,27 @@
 
 class Helper{
 
+	//function which takes facet name as param and retutns its entropy. 
    public static function getEntropy($facetName){
        
        $xml = simplexml_load_file("http://66.228.43.27:8080/solr/select?q=myeloma&facet=true&facet.field=".$facetName."&rows=1");
 
+
+       	//total number of trials
         $totalTrials = $xml->result['numFound'];
         $ent = 0;
+
+        //reading and parsing the xml nodes to get the distribution list
 		$chil1  = $xml->lst[1];
 		$chil2  = $chil1->lst[1];
 		$chil3  = $chil2->lst[0];
 
 		foreach ($chil3 as $item) {
+
+		//storing in array of all possible values for the facet Name in Session, which we can later use in populating dropdowns 	
 		Session::push('q.'.$facetName, (string)$item['name']);
+
+		//calculating the entropy
 		$ent += $item/$totalTrials * log($item/$totalTrials);
 		
 		}
@@ -66,14 +75,18 @@ class Helper{
 			Session::put('next-disable',"disabled");
 		}
 		
+
+		//echo $docs->doc[1]->arr[0]["name"];
 		//get cities
 		$cities =array();
 		for ($i=0; $i<$end; $i++) {
 			$str="";
-		foreach ($docs->doc[$i]->arr[0] as $city) {
-			$str.=$city.",";
-			
-		}
+		if($docs->doc[$i]->arr[0]["name"] == "city" ){
+			foreach ($docs->doc[$i]->arr[0] as $city) {
+				$str.=$city.",";
+				
+			}
+		}	
 		array_push($cities,$str);
 		}
 
@@ -82,18 +95,63 @@ class Helper{
 		$coordinates =array();
 		for ($i=0; $i<$end; $i++) {
 			$str="";
-		foreach ($docs->doc[$i]->arr[2] as $coordinate) {
-			$str.=$coordinate.",";
-			
+		if($docs->doc[$i]->arr[2]["name"] == "coordinates" ){	
+			foreach ($docs->doc[$i]->arr[2] as $coordinate) {
+				$str.=$coordinate.",";
+				
+			}
 		}
 		array_push($coordinates,$str);
 		}
 
+		//get states
+		$states =array();
+		for ($i=0; $i<$end; $i++) {
+			$str="";
+		if($docs->doc[$i]->arr[5]["name"] == "state" ){	
+			foreach ($docs->doc[$i]->arr[5] as $state) {
+				$str.=$state.",";
+				
+			}
+		}
+		array_push($states,$str);
+		}
+
+		//get sitenames
+		$sitenames =array();
+		for ($i=0; $i<$end; $i++) {
+			$str="";
+		if($docs->doc[$i]->arr[3]["name"] == "sitenames" ){	
+			foreach ($docs->doc[$i]->arr[3] as $sitename) {
+				$str.=$sitename.",";
+				
+			}
+		}
+		array_push($sitenames,$str);
+		}
+
+		//get study_type
+		$study_types = array();
+		for ($i=0; $i<$end; $i++) {
+			$str="";
+		if($docs->doc[$i]->str[7]["name"] == "study_type" ){	
+			
+				$str=$docs->doc[$i]->str[7];
+				
+			
+		}
+		array_push($study_types,$str);
+		}
+
+		//combine data
 		$d = array();
 		for ($i=0; $i<$end; $i++) {
 			$t = new Trial();
 			$t->city = $cities[$i];
 			$t->coordinate = $coordinates[$i];
+			$t->state = $states[$i];
+			$t->sitename = $sitenames[$i];
+			$t->study_type = $study_types[$i];
 			array_push($d,$t);
 		}
 		
