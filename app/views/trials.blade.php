@@ -29,15 +29,17 @@
       <thead>
         <tr>
              <th>City</th>
+             <th>Coordinates</th>
              <th>Other</th>
          
         </tr>
       </thead>
       <tbody>
         
-        @foreach($data["cities"] as $city)
+        @foreach($data as $t)
     	<tr>	
-    			<td>{{$city}}</td>
+    			<td>{{$t->city}}</td>
+    			<td>{{$t->coordinate}}</td>
     			<td>other</td>
     	</tr>
     	@endforeach 
@@ -46,7 +48,7 @@
       </tbody>
 </table>
 
-{{HTML::link('trials?next=1&prev=0','Next',array('class'=>' btn btn-info pull-right',Session::get('next-disable')))}} 
+{{HTML::link('trials?next=1&prev=0','Next',array('class'=>' btn btn-primary pull-right',Session::get('next-disable')))}} 
 
 
 </div>

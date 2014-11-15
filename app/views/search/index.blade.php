@@ -28,6 +28,35 @@
         cursor: default; 
 
            }
+    .circle{
+        width: 90px; 
+        height: 90px;
+        line-height: 90px;
+        background:url(images/circle2.png) no-repeat;
+        display: block;
+        text-align: center;
+    }     
+    .trl-txt{
+        line-height: 90px;
+        text-align: right;
+        vertical-align: center;
+         font-size: 16px;
+        font-weight: bold;
+    }  
+    .trl-txt span{
+        font-size: 18px;
+        font-weight: bold;
+    } 
+     .trl-btn{
+        padding-top: 30px;
+        height: 90px;
+        line-height: 90px;
+        vertical-align: :middle;
+       
+    } 
+    .r-top{
+        padding-top: 40px;
+    }
     </style>
 
   </head>
@@ -41,31 +70,29 @@
       <div class="btn btn-warning btn-lg btn-cstm {{Session::get('q5')}}">{{Session::get('q5')}}</div>
     </div>
   </div>
-<div>  
-
-<h2>Trials Returned:: {{ $trials }}</h2> {{HTML::link('trials','View Trials',array('class'=>'fancybox fancybox.iframe btn btn-danger'))}} 
-
-    {{ Form::open(array('url'=>'search', 'class'=>'row form-search', 'role'=>'form','method' => 'get')) }}
-
-                <div class="">
-                    <div class="col-md-3 col-lg-3">
-                    </div>
-                   <div class="col-md-6 col-lg-6 pull-left" style="float:left">
-                    {{Form::label('question',$question,array('style'=>'text-transform:uppercase'))}}:{{Form::select('paramValue', $categories,'',array('class'=>'form-control'))}}
-                    {{Form::hidden('paramName',$question)}}
-                    {{Form::hidden('name',$med)}}</div>
-
-                  <div class="col-md-2 col-lg-2 pull-left"></div>
-                  <div class="row">
-                      {{ Form::submit('Next', array('class'=>'btn btn-primary',$disabled => $disabled))}}
-                  </div>
-                 
-                   
-                </div>
-
-    {{ Form::close() }}
-    {{$query}}
+<div class="row r-top">  
+<div class="col-md-6 col-lg-6 trl-txt">
+<span> Trials Returned:</span>
+<div class="circle pull-right">{{ $trials }}</div>
 </div>
+<div class="col-md-6 col-lg-6 trl-btn">
+ {{HTML::link('trials','VIEW TRIALS',array('class'=>'fancybox fancybox.iframe btn btn-danger pull-left'))}} 
+</div>
+</div>
+<div style="padding-top:60px;">
+            {{ Form::open(array('url'=>'search', 'class'=>'form-inline form-search', 'role'=>'form','method' => 'get')) }}
+
+
+            {{Form::label('question',$question,array('style'=>'text-transform:uppercase'))}}:{{Form::select('paramValue', $categories,'',array('class'=>'form-control'))}}
+            {{Form::hidden('paramName',$question)}}
+            {{Form::hidden('name',$med)}}
+
+            {{ Form::submit('Next', array('class'=>'btn btn-primary',$disabled => $disabled))}}
+
+
+            {{ Form::close() }}
+</div>            
+<!--     {{$query}} -->
 
 
  

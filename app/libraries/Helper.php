@@ -77,13 +77,30 @@ class Helper{
 		array_push($cities,$str);
 		}
 
-		// foreach ($cities as $c) {
-		// 	echo "<br>".$c;
-		// }
-		
 
-		$data = array("totalTrials"=>$totalTrials,"cities"=>$cities);
-		return $data;
+		//get coordinates
+		$coordinates =array();
+		for ($i=0; $i<$end; $i++) {
+			$str="";
+		foreach ($docs->doc[$i]->arr[2] as $coordinate) {
+			$str.=$coordinate.",";
+			
+		}
+		array_push($coordinates,$str);
+		}
+
+		$d = array();
+		for ($i=0; $i<$end; $i++) {
+			$t = new Trial();
+			$t->city = $cities[$i];
+			$t->coordinate = $coordinates[$i];
+			array_push($d,$t);
+		}
+		
+		//
+
+		$data = array("totalTrials"=>$totalTrials,"cities"=>$cities,"coordinates"=>$coordinates);
+		return $d;
 		
 
 
