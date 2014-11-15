@@ -3,9 +3,9 @@
 class Helper{
 
 	//function which takes facet name as param and retutns its entropy. 
-   public static function getEntropy($facetName){
+   public static function getEntropy($facetName,$name){
        
-       $xml = simplexml_load_file("http://66.228.43.27:8080/solr/select?q=myeloma&facet=true&facet.field=".$facetName."&rows=1");
+       $xml = simplexml_load_file("http://66.228.43.27:8080/solr/select?q=".$name."&facet=true&facet.field=".$facetName."&rows=1");
 
 
        	//total number of trials
@@ -19,7 +19,7 @@ class Helper{
 
 		foreach ($chil3 as $item) {
 
-		//storing in array of all possible values for the facet Name in Session, which we can later use in populating dropdowns 	
+		//storing in array , all possible values for the facet Name in Session, which we can later use in populating dropdowns 	
 		Session::push('q.'.$facetName, (string)$item['name']);
 
 		//calculating the entropy
@@ -130,7 +130,7 @@ class Helper{
 		array_push($sitenames,$str);
 		}
 
-		//get study_type
+		//get study_types
 		$study_types = array();
 		for ($i=0; $i<$end; $i++) {
 			$str="";
@@ -165,23 +165,5 @@ class Helper{
 
    }
 
-    public static function getTypes($facetName){
-       
-       $xml = simplexml_load_file("http://66.228.43.27:8080/solr/select?q=myeloma&facet=true&facet.field=".$facetName."&rows=0");
-
-        $totalTrials = $xml->result['numFound'];
-        $ent = 0;
-		$chil1  = $xml->lst[1];
-		$chil2  = $chil1->lst[1];
-		$chil3  = $chil2->lst[0];
-
-		foreach ($chil3 as $item) {
-		echo $item['name'];
-		
-		}
-
-
-
-   }
-
+  
 }

@@ -33,12 +33,12 @@ class HomeController extends BaseController {
 				Session::put($name,$name);
 
 				//storing the calculated entropies of different facets in array
-				$questions = array("phase" => Helper::getEntropy('phase'), "gender" => Helper::getEntropy('gender'), "treatment_status" => Helper::getEntropy('treatment_status'), "state" => Helper::getEntropy('state'),"city" => Helper::getEntropy('city'));
+				$questions = array("phase" => Helper::getEntropy('phase',$name), "gender" => Helper::getEntropy('gender',$name), "treatment_status" => Helper::getEntropy('treatment_status',$name), "state" => Helper::getEntropy('state',$name),"city" => Helper::getEntropy('city',$name));
 
-				//As higher the entropy is, higher an event is unlikely, we sort the array based on entropy values in ascending order
-				asort($questions);
+				//As higher the entropy is, higher an event is unlikely, we sort the array based on entropy values in descending order, so the next question will be selected that has maximum entropy
+				arsort($questions);
 
-				//we store questions to be asked in ascending order of entropy in session, so q1 being the first question , and its value being the question name, e.g: q1=city
+				//we store questions to be asked in descending order of entropy in session, so q1 being the first question , and its value being the question name, e.g: q1=city
            			$i=1;
            			foreach ($questions as $key => $val) {
            			Session::put("q".$i, $key);
