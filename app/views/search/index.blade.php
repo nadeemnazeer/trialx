@@ -62,7 +62,8 @@
 
   </head>
   <body class="container" style="text-align:center">
-  <div class="row" style="padding-top:200px;">
+  {{HTML::link('/','back to search',array('class'=>'btn btn-info','style'=>"margin-top:60px;"))}} 
+  <div class="row" style="padding-top:40px;">
     <div class="col-md-12 col-lg-12" >
       <div class="btn btn-warning btn-sm btn-cstm {{Session::get('q1')}}">{{Session::get('q1')}}</div><img src="images/arrow2.png">
       <div class="btn btn-warning btn-sm btn-cstm {{Session::get('q2')}}">{{Session::get('q2')}}</div><img src="images/arrow2.png">
@@ -74,13 +75,13 @@
 
 <div style="padding-top:30px;">
             {{ Form::open(array('url'=>'search', 'class'=>'form-inline form-search', 'role'=>'form','method' => 'get')) }}
-            {{ Form::submit('Previous', array('class'=>'btn btn-primary','name'=>'prev'))}}
+            {{ Form::submit('previous', array('class'=>'btn btn-primary','name'=>'prev',$disPrev=>$disPrev))}}
 
-            {{Form::label('question',$question,array('style'=>'text-transform:uppercase'))}}&nbsp;{{Form::select('paramValue', $categories,'',array('class'=>'form-control'))}}
+            {{Form::label('question',$question,array('style'=>'text-transform:uppercase'))}}&nbsp;{{Form::select('paramValue', $categories,$catSelected,array('class'=>'form-control'))}}
             {{Form::hidden('paramName',$question)}}
             {{Form::hidden('name',$med)}}
 
-            {{ Form::submit('Next', array('class'=>'btn btn-primary',$disabled => $disabled,'name'=>'next'))}}
+            {{ Form::submit('next', array('class'=>'btn btn-primary',$disNext => $disNext,'name'=>'next'))}}
 
 
             {{ Form::close() }}

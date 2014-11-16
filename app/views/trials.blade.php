@@ -34,7 +34,7 @@
 <table class="table table-bordered table-striped table-condensed">
       <thead>
         <tr>
-              
+             <th>id</th> 
              <th>City</th>
              <th>Sitename</th>
              <th>States</th>
@@ -47,6 +47,7 @@
         
         @foreach($data as $t)
     	<tr>	
+          <td>{{$t->id}}</td>
           <td>{{$t->city}}</td>
     			<td>{{$t->sitename}}</td>
           <td>{{$t->state}}</td>

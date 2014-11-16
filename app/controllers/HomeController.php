@@ -34,7 +34,7 @@ class HomeController extends BaseController {
 
 				$arr = Session::get('prev');
 				$top = array_pop($arr);
-				
+
 				Session::forget('prev');
 
 				foreach ($arr as $value) {
@@ -52,7 +52,7 @@ class HomeController extends BaseController {
 
 			//checking if we have already calculated entropy for the medical condition with name = $name, so as to avoid overhead of recalculating it
 			if (!(Session::has($name))){
-				echo "setting session";
+				// echo "setting session";
 				Session::put($name,$name);
 
 				//storing the calculated entropies of different facets in array
@@ -72,7 +72,8 @@ class HomeController extends BaseController {
 				
 			}
 			
-		   
+		   $disPrev="";
+		   $disNext="";
 			
 			if(Input::has('next')){
 				
@@ -80,7 +81,13 @@ class HomeController extends BaseController {
 
 			}
 			elseif(Input::has('prev')){
+
+
 				Session::put('qCount',Session::get('qCount')-1);
+				if(Session::get('qCount') == 1){
+					$disPrev = "disabled";
+				}
+
 				
 			}
 		
@@ -89,7 +96,9 @@ class HomeController extends BaseController {
 		   
 			//array for storing the possible values of answers to questions which we had already stored in session while calculating entropy in getEntropy() function.
 			$categories = array();
-			$dis="";
+			
+			
+
 			
 			
 
@@ -100,9 +109,16 @@ class HomeController extends BaseController {
 			else{
 			//populating the array of possible values for question	
 			foreach (Session::get('q.'.$currQuestion) as $qi) {
+
 				$categories[$qi] = $qi;
 			}
 
+			}
+
+
+			$catSelected=array_values($categories)[0];
+			if(array_values($categories)[0] == ""){
+				$catSelected = array_values($categories)[1];
 			}
 
 			asort($categories);
@@ -114,8 +130,10 @@ class HomeController extends BaseController {
 		   ->with('med',$name)
 		   ->with('question',$currQuestion)
 		   ->with('categories',$categories)
-		   ->with('disabled',$dis)
-		   ->with('query',$cond);
+		   ->with('disNext',$disNext)
+		   ->with('query',$cond)
+		   ->with('disPrev',$disPrev)
+		   ->with('catSelected',$catSelected);
 		  
 
 

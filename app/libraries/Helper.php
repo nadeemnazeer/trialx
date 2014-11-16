@@ -74,6 +74,19 @@ class Helper{
 			$end = $totalTrials-$start;
 			Session::put('next-disable',"disabled");
 		}
+
+		//get ids
+		$ids = array();
+		for ($i=0; $i<$end; $i++) {
+			$str="";
+		if($docs->doc[$i]->str[4]["name"] == "id" ){	
+			
+				$str=$docs->doc[$i]->str[4];
+				
+			
+		}
+		array_push($ids,$str);
+		}
 		
 
 		//echo $docs->doc[1]->arr[0]["name"];
@@ -147,6 +160,7 @@ class Helper{
 		$d = array();
 		for ($i=0; $i<$end; $i++) {
 			$t = new Trial();
+			$t->id = $ids[$i];
 			$t->city = $cities[$i];
 			$t->coordinate = $coordinates[$i];
 			$t->state = $states[$i];
