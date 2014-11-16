@@ -9,8 +9,8 @@ public  $state;
 public  $sitename;
 public  $study_type;
 
-
-
-
 }
+
+
+
 ?>

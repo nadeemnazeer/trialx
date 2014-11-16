@@ -157,7 +157,7 @@ class Helper{
 		}
 
 		//combine data
-		$d = array();
+		$data = array();
 		for ($i=0; $i<$end; $i++) {
 			$t = new Trial();
 			$t->id = $ids[$i];
@@ -166,13 +166,13 @@ class Helper{
 			$t->state = $states[$i];
 			$t->sitename = $sitenames[$i];
 			$t->study_type = $study_types[$i];
-			array_push($d,$t);
+			array_push($data,$t);
 		}
 		
 		//
 
-		$data = array("totalTrials"=>$totalTrials,"cities"=>$cities,"coordinates"=>$coordinates);
-		return $d;
+		
+		return $data;
 		
 
 

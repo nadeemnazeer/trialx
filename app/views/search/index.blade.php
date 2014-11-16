@@ -63,7 +63,7 @@
   </head>
   <body class="container" style="text-align:center">
   {{HTML::link('/','back to search',array('class'=>'btn btn-info','style'=>"margin-top:60px;"))}} 
-  <div class="row" style="padding-top:40px;">
+  <div class="row" style="padding-top:80px;">
     <div class="col-md-12 col-lg-12" >
       <div class="btn btn-warning btn-sm btn-cstm {{Session::get('q1')}}">{{Session::get('q1')}}</div><img src="images/arrow2.png">
       <div class="btn btn-warning btn-sm btn-cstm {{Session::get('q2')}}">{{Session::get('q2')}}</div><img src="images/arrow2.png">
