@@ -15,6 +15,13 @@ class HomeController extends BaseController {
 
 	//for refining search
 	public function getSearch(){
+
+		$xml = simplexml_load_file("http://66.228.43.27:8080/solr/select?q=".Input::get('name')."&rows=1");
+        $totalTrials = $xml->result['numFound'];
+		if($totalTrials == 0 )
+			return Redirect::to("/?error=Error: no trial found");
+
+
 			$paramName=Input::get('paramName');;
 			$paramValue=Input::get('paramValue');;
 			$name=Input::get('name');

@@ -27,8 +27,6 @@ class Helper{
 		
 		}
 
-
-
 		 return $ent;
 
    }
@@ -41,20 +39,13 @@ class Helper{
         $ent = 0;
 		$chil1  = $xml->result;
 		
-		// foreach ($chil1 as $doc) {
-		// 	print_r($doc);
-		// }
-
-		// foreach ($chil1->doc[1]->arr[0] as $str) {
-		// 	echo $str;
-		// }
 		
 		return $totalTrials;
-		
-
-
-
+	
    }
+    
+
+
     public static function getTrials($name, $cond,$start,$rows){
        
        $xml = simplexml_load_file("http://66.228.43.27:8080/solr/select?q=".$name.$cond."&start=".$start."&rows=".$rows);

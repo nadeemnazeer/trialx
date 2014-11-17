@@ -38,8 +38,10 @@
         </div>
         <div class="col-lg-3 col-md-3"></div>
     {{ Form::close() }}
-</div>
 
+
+</div>
+  <h5 style="color:red; text-align:center; ">{{Input::get('error')}}</h5> 
 
 
 
