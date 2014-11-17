@@ -111,7 +111,7 @@ class HomeController extends BaseController {
 			
 			//disabling the next button, if we asked all the 5 questions
 			if(Session::get('qCount') > 5){
-				$dis = "disabled";
+				$disNext = "disabled";
 			}
 			else{
 			//populating the array of possible values for question if question pending	
@@ -122,13 +122,7 @@ class HomeController extends BaseController {
 
 			}
 
-			//determining if empty values is possible values
-			$catSelected=array_values($categories)[0];
-			if(array_values($categories)[0] == ""){
-				$catSelected = array_values($categories)[1];
-			}
-
-			//sorting possible values for question
+		
 			asort($categories);
 
 
@@ -140,8 +134,7 @@ class HomeController extends BaseController {
 		   ->with('categories',$categories)
 		   ->with('disNext',$disNext)
 		   ->with('query',$cond)
-		   ->with('disPrev',$disPrev)
-		   ->with('catSelected',$catSelected);
+		   ->with('disPrev',$disPrev);
 		  
 
 

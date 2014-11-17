@@ -19,7 +19,9 @@ class Helper{
 
 		foreach ($chil3 as $item) {
 
-		//storing in array , all possible values for the facet Name in Session, which we can later use in populating dropdowns 	
+		//storing in array , all possible values for the facet Name in Session, which we can later use in populating dropdowns 
+		if((string)$item['name'] == "")	
+			continue;
 		Session::push('q.'.$facetName, (string)$item['name']);
 
 		//calculating the entropy

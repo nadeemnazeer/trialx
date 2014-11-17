@@ -77,7 +77,7 @@
             {{ Form::open(array('url'=>'search', 'class'=>'form-inline form-search', 'role'=>'form','method' => 'get')) }}
             {{ Form::submit('previous', array('class'=>'btn btn-primary','name'=>'prev',$disPrev=>$disPrev))}}
 
-            {{Form::label('question',$question,array('style'=>'text-transform:uppercase'))}}&nbsp;{{Form::select('paramValue', $categories,$catSelected,array('class'=>'form-control'))}}
+            {{Form::label('question',$question,array('style'=>'text-transform:uppercase'))}}&nbsp;{{Form::select('paramValue', $categories,'',array('class'=>'form-control'))}}
             {{Form::hidden('paramName',$question)}}
             {{Form::hidden('name',$med)}}
 
